@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>点击下载应用</title>
+    <style>
+    .trendwin {
+        background: url(http://img1.zsgjs.com/upfile/file/2017/0327/8db2d228d26538edd68717b7a177a603.jpg) no-repeat;
+        background-size: 100% auto;
+    }
+    </style>
+</head>
+
+<body style="height:200px;">
+    <script src="//cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var u = navigator.userAgent;
+
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+			
+			if (u.indexOf('MicroMessenger') > -1) {
+
+                $('body').attr('class', 'trendwin')
+            }
+			else
+			{
+				window.location.href = "https://fir.im/qve7";
+			}
+        } else if (u.indexOf('iPhone') > -1 || !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || u.indexOf('Mac') > -1 || u.indexOf('iPad') > -1) {
+            
+            if (u.indexOf('MicroMessenger') > -1) {
+
+                $('body').attr('class', 'trendwin')
+            }
+			else
+			{
+				window.location.href = "https://fir.im/j2c3";
+			}
+			
+        } else if (u.indexOf('Windows Phone') > -1) {
+            window.location.href = "https://fir.im/qve7";
+        } else {
+            document.write("您请求的页面不存在！");
+        }
+    })
+    </script>
+</body>
+
+</html>
