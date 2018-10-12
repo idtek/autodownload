@@ -20,17 +20,26 @@
         var u = navigator.userAgent;
 
         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+			
 			if (u.indexOf('MicroMessenger') > -1) {
 
                 $('body').attr('class', 'trendwin')
             }
-            window.location.href = "https://fir.im/qve7";
+			else
+			{
+				window.location.href = "https://fir.im/qve7";
+			}
         } else if (u.indexOf('iPhone') > -1) {
-            window.location.href = "https://fir.im/qve7";
+            
             if (u.indexOf('MicroMessenger') > -1) {
 
                 $('body').attr('class', 'trendwin')
             }
+			else
+			{
+				window.location.href = "https://fir.im/qve7";
+			}
+			
         } else if (u.indexOf('Windows Phone') > -1) {
             window.location.href = "https://fir.im/qve7";
         } else {
