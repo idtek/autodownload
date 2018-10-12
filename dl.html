@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>点击下载应用</title>
+    <style>
+    .trendwin {
+        background: url(http://img1.zsgjs.com/upfile/file/2017/0327/8db2d228d26538edd68717b7a177a603.jpg) no-repeat;
+        background-size: 100% auto;
+    }
+    </style>
+</head>
+
+<body style="height:200px;">
+    <script src="//cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var u = navigator.userAgent;
+
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+
+            window.location.href = "http://14.23.84.5:7808/gjs/common/attachment/download.do?id=1808";
+        } else if (u.indexOf('iPhone') > -1) {
+            window.location.href = "https://itunes.apple.com/cn/app/yong-jiao-suo-guo-ji-ban/id1108926615?l=en&mt=8";
+            if (u.indexOf('MicroMessenger') > -1) {
+
+                $('body').attr('class', 'trendwin')
+            }
+        } else if (u.indexOf('Windows Phone') > -1) {
+            window.location.href = "http://14.23.84.5:7808/gjs/common/attachment/download.do?id=1808";
+        } else {
+            document.write("您请求的页面不存在！");
+        }
+    })
+    </script>
+</body>
+
+</html>
